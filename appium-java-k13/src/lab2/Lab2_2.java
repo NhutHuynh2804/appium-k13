@@ -11,6 +11,8 @@ public class Lab2_2 {
             System.out.println("It is even number:"+Num);
         }else {
             System.out.println("It is odd number:"+Num);
+            System.out.println("Have a good day");
+
         }
     }
 }
