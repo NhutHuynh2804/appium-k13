@@ -1,6 +1,5 @@
 package lab4;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ public class Lab4 {
 *write a method find min num
 *write a method find max num
 *write a method search num and return index
-*enhance nagative number user input
+*enhance negative number user input
 */
 
         int [] randomArr = generateArray();
@@ -25,7 +24,7 @@ public class Lab4 {
             switch (userOption){
                 case 1:
                     for (int num : randomArr) {
-                        System.out.println("Test Araay is:"+num);
+                        System.out.println("Test Array is:"+num);
                     }
                     break;
                 case 2:
@@ -68,10 +67,10 @@ public class Lab4 {
         return scanner.nextInt();
     }
     public static int[] generateArray(){
-        //Random Array length 6 and elemens under 1000
+        //Random Array length 6 and elements under 1000
         Random rand = new Random();
-        int arrLenght = 6;
-        int [] intArr = new int [arrLenght];
+        int arrLength = 6;
+        int [] intArr = new int [arrLength];
         for (int index = 0; index < intArr.length; index++) {
             intArr[index] = rand.nextInt(1000);
         }
@@ -80,9 +79,9 @@ public class Lab4 {
 
     public static int minNum(int[]arr){
         int minNum=arr[0];
-        for (int index = 0; index <arr.length ; index++) {
-            if(arr[index]<minNum){
-                minNum=arr[index];
+        for (int i : arr) {
+            if (i < minNum) {
+                minNum = i;
             }
         }
         return minNum;
@@ -90,9 +89,9 @@ public class Lab4 {
 
     public static int maxNum(int[]arr){
         int maxNum=0;
-        for (int index = 0; index <arr.length ; index++) {
-            if(arr[index]>maxNum){
-                maxNum=arr[index];
+        for (int i : arr) {
+            if (i > maxNum) {
+                maxNum = i;
             }
         }
         return maxNum;
