@@ -31,7 +31,7 @@ public class Lab4 {
                     System.out.println("Max number in array is"+maxNum(randomArr));
                     break;
                 case 3:
-                    System.out.println("Max number in array is"+minNum(randomArr));
+                    System.out.println("Min number in array is"+minNum(randomArr));
                     break;
                 case 4:
                     System.out.println("Please enter search number");
