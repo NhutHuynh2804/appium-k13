@@ -8,9 +8,9 @@ public class Lab6_1 {
         public static int totalMin(String str){
             String strHr = str.replaceAll("\\D+","");
             int total = Integer.parseInt(strHr);
-            int Hr = total/10;
+            int hr = total/10;
             int min = total%10;
-            return Hr*60+min;
+            return hr*60+min;
         }
     }
 
