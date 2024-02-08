@@ -26,20 +26,19 @@ public class Lab6_5 {
         return userSentence;
     }
     public static void countWord(String input){
-        if(input==null||input.isEmpty()){
-            System.out.println("Please input a valid sentence:");
-            return ;
+        if (isInvalidInput(input)) {
+            return;
         }
-        String [] words = input.split("\\W+");
-        System.out.println("Total words is:"+words.length);
+        String[] words = input.split("\\s+");
+        System.out.println("Total words is:" + words.length);
     }
-    public static void checkWordAppear(String input){
-        if(input==null||input.isEmpty()){
-            System.out.println("Please input a valid sentence:");
-            return ;
+
+    public static void checkWordAppear(String input) {
+        if (isInvalidInput(input)) {
+          return;
         }
         Map<String,Integer> wordsWithCount = new HashMap<String,Integer>();
-        String [] words = input.split("\\W+");
+        String [] words = input.split("\\s+");
         for (String word : words) {
             if(wordsWithCount.containsKey(word)){
                 wordsWithCount.put(word,wordsWithCount.get(word)+1);
@@ -49,5 +48,12 @@ public class Lab6_5 {
 
         }
         System.out.println(wordsWithCount);
+    }
+    public static boolean isInvalidInput(String input){
+        if(input==null||input.isEmpty()){
+            System.out.println("Please input a valid sentence");
+            return true;
+        }
+        return false;
     }
 }

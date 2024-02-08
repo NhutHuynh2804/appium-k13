@@ -9,6 +9,13 @@ public class Lab6_3 {
         extractNum(myStr);
 
     }
+    public static String arrayNumToString(List<Integer> arrayNum) {
+        StringBuilder result = new StringBuilder();
+        for (Integer num : arrayNum) {
+            result.append(num);
+        }
+        return result.toString().trim();
+    }
 
     public static void extractNum(String myStr) {
         List<Integer> arrayNum = new ArrayList<>();
@@ -17,7 +24,9 @@ public class Lab6_3 {
             if(Character.isDigit(character)){
                 arrayNum.add(Integer.parseInt(Character.toString(character)));
             }
+
         }
-        System.out.println("Extract the number in array is:"+arrayNum);
+        String arrayNumString = arrayNumToString(arrayNum);
+        System.out.println("Extract the number in array is:"+arrayNumString );
     }
 }
