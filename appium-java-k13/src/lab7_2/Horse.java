@@ -3,9 +3,10 @@ package lab7_2;
 import java.security.SecureRandom;
 
 public class Horse extends Animal{
-    @Override
-    public int speed() {
-        return new SecureRandom().nextInt(76);
+    private static final int MAX_SPEED=75;
+    public Horse (){
+        this.name = "Horse";
+        this.speed = new SecureRandom().nextInt(MAX_SPEED+1);
     }
 
 }

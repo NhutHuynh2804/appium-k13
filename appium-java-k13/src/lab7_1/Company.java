@@ -7,7 +7,7 @@ public class Company {
     public static double calculateTotalSalary(List<Employee> employees){
         double totalSalary =0.0;
         for (Employee employee : employees) {
-            totalSalary+=employee.salary();
+            totalSalary+=employee.getSalary();
         }return totalSalary;
     }
 
