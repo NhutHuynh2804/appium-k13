@@ -7,7 +7,7 @@ public class Animal {
     protected int speed;
     protected boolean flyable;
 
-    public Animal(Builder builder) {
+    private Animal(Builder builder) {
         this.name= builder.name;
         this.speed= new SecureRandom().nextInt(builder.maxSpeed + 1);
         this.flyable= builder.flyable;
@@ -53,9 +53,9 @@ public class Animal {
             this.flyable=true;
         }
     }
-    private Animal(String name, int maxSpeed, boolean flyable) {
-        this.name = name;
-        this.speed = new SecureRandom().nextInt(maxSpeed + 1);
-        this.flyable = flyable;
-    }
+//    private Animal(String name, int maxSpeed, boolean flyable) {
+//        this.name = name;
+//        this.speed = new SecureRandom().nextInt(maxSpeed + 1);
+//        this.flyable = flyable;
+//    }
 }
